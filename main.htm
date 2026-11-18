@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Navbar (Fixed & Static) -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="nav-brand">
+                <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div class="nav-text">
+                    <h1>What's For Dinner</h1>
+                    <p>Your daily meal inspiration</p>
+                </div>
+            </div>
+            <div class="nav-icons">
+                <i class="fa-solid fa-bookmark" title="Saved"></i>
+                <i class="fa-solid fa-clock" title="History"></i>
+                <i class="fa-solid fa-gear" title="Settings"></i>
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" alt="Profile" class="profile-pic">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="recipe-card">
+            
+            <!-- Left Side: Fixed Image & Badges -->
+            <div class="recipe-image-section">
+                <img id="recipe-img" src="" alt="Recipe Image" class="recipe-bg-img">
+                
+                <!-- Rating Badge on top of image -->
+                <div class="rating-badge">
+                    <i class="fa-solid fa-star"></i> <span id="recipe-rating">4.9</span> (<span id="recipe-reviews">120</span> reviews)
+                </div>
+
+                <!-- Stats Card on bottom of image -->
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-clock" style="color: #ff5722;"></i>
+                        <span>Prep Time</span>
+                        <strong id="prep-time">10 min</strong>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-fire" style="color: #ff5722;"></i>
+                        <span>Cook Time</span>
+                        <strong id="cook-time">5 min</strong>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-user-group" style="color: #3b82f6;"></i>
+                        <span>Servings</span>
+                        <strong id="servings">1 person</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Scrollable Content & Tabs -->
+            <div class="recipe-content-section">
+                <div class="recipe-header-top">
+                    <div class="tags">
+                        <span class="tag green" id="tag-difficulty">Easy</span>
+                        <span class="tag blue" id="tag-category">Breakfast</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="icon-btn save-btn" id="save-recipe-btn" title="Save Recipe"><i class="fa-solid fa-bookmark"></i></button>
+                        <button class="icon-btn share-btn" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                </div>
+
+                <h2 id="recipe-title">Avocado & Egg Breakfast Toast</h2>
+                <p class="recipe-desc" id="recipe-desc">Toasted artisanal sourdough topped with smashed avocado, poached egg, and red pepper flakes</p>
+
+                <!-- Warning Banner -->
+                <div class="warning-banner" id="warning-box" style="display: none;">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <strong>Extended Preparation Time</strong>
+                        <p>This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+                    </div>
+                </div>
+
+                <!-- Tabs Navigation -->
+                <div class="tabs-nav">
+                    <button class="tab-btn" data-tab="ingredients"><i class="fa-solid fa-list-check"></i> Ingredients</button>
+                    <button class="tab-btn" data-tab="instructions"><i class="fa-solid fa-list-ol"></i> Instructions</button>
+                    <button class="tab-btn active" data-tab="nutrition"><i class="fa-solid fa-bolt"></i> Nutrition</button>
+                    <button class="tab-btn" data-tab="tips"><i class="fa-solid fa-lightbulb"></i> Chef's Tips</button>
+                </div>
+
+                <!-- Dynamic Content Area -->
+                <div class="scrollable-content" id="tab-content-area">
+                    <!-- Content injected via JS -->
+                </div>
+
+                <!-- Bottom Footer Action -->
+                <div class="card-footer-action">
+                    <button class="try-another-btn" id="try-another-btn">
+                        <i class="fa-solid fa-rotate"></i> Try Another Recipe
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
